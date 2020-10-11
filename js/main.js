@@ -2,10 +2,9 @@ const cartButton = document.querySelector("#cart-button");
 const modal = document.querySelector(".modal")
 const modalClose = document.querySelector(".close")
 
-cartButton.addEventListener("click", function (event) {
-  modal.classList.add("show")
-})
+cartButton.addEventListener("click", toggleModal)
+modalClose.addEventListener("click", toggleModal)
 
-modalClose.addEventListener("click", function (event) {
-  modal.classList.remove("show")
-})
+function toggleModal() {
+  modal.classList.toggle("show")
+}
